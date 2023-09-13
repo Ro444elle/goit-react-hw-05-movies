@@ -1,16 +1,28 @@
+import React, { lazy, Suspense } from 'react';
+import { Routes, Route } from 'react-router-dom';
+import 'normalize.css';
+const Home = lazy(() => import('./Home/Home'));
+const NotFound = lazy(() => import('./NotFound/NotFound'));
+
+const Movies = lazy(() => import('./Movies/Movies'));
+const MovieDetails = lazy(() => import('./MoviesDetails/MovieDetails'));
+const Cast = lazy(() => import('./Cast/Cast'));
+const Reviews = lazy(() => import('./Reviews/Reviews'));
+
 export const App = () => {
   return (
-    <div
-      style={{
-        height: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: 40,
-        color: '#010101'
-      }}
-    >
-      React homework template
+    <div>
+      <Suspense fallback={<div>Loading...</div>}>
+        Routes
+        <Routes>
+          <Route exact path="/" element={<Home />} />
+          <Route exact path="/movies" element={<Movies />} />
+          <Route path="movies/:movieId" element={<MovieDetails />} />
+          <Route path="/movie/:movieId/cast" element={<Cast />} />
+          <Route path="/movie/:movieId/reviews" element={<Reviews />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </Suspense>
     </div>
   );
 };

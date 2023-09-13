@@ -1,0 +1,37 @@
+import React, { useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom';
+import { getMovieReviews } from 'components/Api/Api';
+
+function Reviews() {
+  const { movieId } = useParams();
+  const [reviews, setReviews] = useState([]);
+
+  useEffect(() => {
+    async function fetchMovieReviews() {
+      try {
+        const reviewsResponse = await getMovieReviews(movieId);
+        setReviews(reviewsResponse.results);
+      } catch (error) {
+        console.error('Error fetching movie reviews:', error);
+      }
+    }
+
+    fetchMovieReviews();
+  }, [movieId]);
+
+  return (
+    <div>
+      <h2>Reviews</h2>
+      <ul>
+        {reviews.map(review => (
+          <li key={review.id}>
+            <p>Author: {review.author}</p>
+            <p>{review.content}</p>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+}
+
+export default Reviews;

@@ -1,0 +1,32 @@
+/* MovieDetails.module.css */
+.movieDetailsContainer {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f0f0f0;
+}
+
+.movieTitle {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.movieOverview {
+  margin-top: 20px;
+}
+
+.sectionTitle {
+  font-size: 20px;
+  margin-top: 20px;
+}
+
+.castList,
+.reviewList {
+  list-style-type: none;
+  padding: 0;
+}
+
+.castItem,
+.reviewItem {
+  margin-top: 10px;
+}
