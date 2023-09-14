@@ -16,9 +16,6 @@ export default function MovieDetails() {
         setMovieDetails(detailsResponse);
       } catch (error) {
         console.error('Error fetching movie details:', error);
-
-        // console.error('Error status:', error.response?.status);
-        // console.error('Error message:', error.message);
       }
     }
     fetchMovieData();
