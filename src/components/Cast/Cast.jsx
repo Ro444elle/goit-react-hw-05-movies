@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { getMovieCast } from 'components/Api/Api';
+import styles from './Cast.module.css';
 
 function Cast() {
   const { movieId } = useParams();
@@ -20,17 +21,12 @@ function Cast() {
   }, [movieId]);
 
   return (
-    <div>
-      <h2>Cast</h2>
-      <ul>
+    <div className={styles['cast-container']}>
+      <h2 className={styles['cast-title']}>Cast</h2>
+      <ul className={styles['cast-list']}>
         {cast.map(actor => (
-          <li key={actor.id}>
-            <img
-              src={`https://image.tmdb.org/t/p/w185/${actor.profile_path}`}
-              alt={actor.name}
-            />
-            <p>{actor.name}</p>
-            <p>Character: {actor.character}</p>
+          <li key={actor.id} className={styles['cast-item']}>
+            {actor.name}
           </li>
         ))}
       </ul>

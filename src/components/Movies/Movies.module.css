@@ -1,0 +1,44 @@
+.movies-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.movie-list {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.movie-item {
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.movie-item:hover {
+  border: 1px solid grey;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
+}
+
+
+.movie-poster {
+  width: 100px;
+  height: 150px;
+  margin-right: 10px;
+}
+
+.movie-title {
+  font-size: 18px;
+  color: #333;
+  font-weight: bold;
+  margin-top: 8px;
+}

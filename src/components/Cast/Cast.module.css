@@ -1,0 +1,22 @@
+.cast-container {
+  margin: 20px;
+  padding: 20px;
+  background-color: #f5f5f5;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.cast-title {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.cast-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.cast-item {
+  margin-bottom: 10px;
+  font-size: 14px;
+}

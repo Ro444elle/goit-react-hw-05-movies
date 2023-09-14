@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { searchMovies } from 'components/Api/Api';
+import styles from './Movies.module.css';
+import { Link } from 'react-router-dom';
 
 export default function Movies() {
   const [searchKeyword, setSearchKeyword] = useState('');
@@ -17,20 +19,37 @@ export default function Movies() {
     }
   };
 
+  const handleEnterKeyPress = e => {
+    if (e.key === 'Enter') {
+      handleSearch();
+    }
+  };
+
   return (
-    <div>
+    <div className={styles['movie-container']}>
       <input
         type="text"
         placeholder="Search for movies..."
         value={searchKeyword}
         onChange={e => setSearchKeyword(e.target.value)}
+        onKeyDown={handleEnterKeyPress}
       />
 
       <button onClick={handleSearch}>Search</button>
       {/* {error && <p>Error:{error.message}</p>} */}
-      <ul>
+      <Link to="/">
+        <button className={styles.backButton}>Back to Home</button>
+      </Link>
+      <ul className={styles['movie-list']}>
         {movies.map(movie => (
-          <li key={movie.id}>{movie.title}</li>
+          <li key={movie.id} className={styles['movie-item']}>
+            <p className={styles['movie-title']}>{movie.title}</p>
+            <img
+              src={`https://image.tmdb.org/t/p/w200/${movie.poster_path}`}
+              alt={movie.title}
+              className={styles['movie-poster']}
+            />
+          </li>
         ))}
       </ul>
     </div>

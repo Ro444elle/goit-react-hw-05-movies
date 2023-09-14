@@ -2,13 +2,15 @@
 .movieDetailsContainer {
   max-width: 800px;
   margin: 0 auto;
-  padding: 20px;
-  background-color: #f0f0f0;
+  background-color: #fff;
+  border-radius: 8px;
+  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); */
 }
 
 .movieTitle {
   font-size: 24px;
   font-weight: bold;
+  margin-bottom: 16px;
 }
 
 .movieOverview {
@@ -24,9 +26,29 @@
 .reviewList {
   list-style-type: none;
   padding: 0;
+  display: flex;
+  gap: 2px;
+  padding: 0;
+  margin: 0;
 }
+
+.reviewList {
+  display: grid;
+}
+
+
 
 .castItem,
 .reviewItem {
   margin-top: 10px;
+  font-size: 12px;
+  padding: 16px;
+
+}
+
+.reviewItem {
+  margin-bottom: 16px;
+  background-color: #f5f5f5;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
