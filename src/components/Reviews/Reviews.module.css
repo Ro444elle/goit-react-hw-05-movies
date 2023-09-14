@@ -1,4 +1,4 @@
-.reviews-container {
+.reviewsContainer {
   margin: 20px;
   padding: 20px;
   background-color: #f5f5f5;
@@ -6,30 +6,41 @@
   border-radius: 5px;
 }
 
-.reviews-title {
+.reviewsTitle {
   font-size: 24px;
   margin-bottom: 10px;
 }
 
-.review-list {
+.reviewList {
   list-style-type: none;
   padding: 0;
+  display: flex;
+  gap: 2px;
+  padding: 0;
+  margin: 0;
+  display: grid;
 }
 
-.review-item {
-  margin-bottom: 20px;
+.reviewItem {
   border: 1px solid #ddd;
   border-radius: 5px;
-  padding: 10px;
   background-color: #fff;
+  margin-top: 10px;
+  font-size: 12px;
+  padding: 16px;
+  margin-bottom: 16px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.review-author {
+
+
+.reviewAuthor {
   font-weight: bold;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
+  font-size: 14px;
 }
 
-.review-content {
-  font-size: 16px;
+.reviewContent {
+  font-size: 14px;
+  font-style: italic;
 }

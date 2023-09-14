@@ -21,12 +21,19 @@ function Cast() {
   }, [movieId]);
 
   return (
-    <div className={styles['cast-container']}>
-      <h2 className={styles['cast-title']}>Cast</h2>
-      <ul className={styles['cast-list']}>
+    <div className={styles.castContainer}>
+      <h3 className={styles.sectionTitle}>Cast</h3>
+      <ul className={styles.castList}>
         {cast.map(actor => (
-          <li key={actor.id} className={styles['cast-item']}>
-            {actor.name}
+          <li key={actor.id} className={styles.castItem}>
+            <img
+              src={`https://image.tmdb.org/t/p/w200${actor.profile_path}`}
+              alt={actor.name}
+            />
+            <div>
+              <p>{actor.name}</p>
+              <p>{actor.character}</p>
+            </div>
           </li>
         ))}
       </ul>

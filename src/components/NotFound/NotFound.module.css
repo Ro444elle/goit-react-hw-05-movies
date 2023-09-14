@@ -1,0 +1,10 @@
+.linkN {
+  color: rgb(89, 176, 198);
+  text-decoration: none;
+  font-weight: bold;
+  margin-right: 20px;
+}
+
+.linkN:hover {
+  text-decoration: underline;
+}

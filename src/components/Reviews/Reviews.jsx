@@ -21,13 +21,13 @@ function Reviews() {
   }, [movieId]);
 
   return (
-    <div className={styles['reviews-container']}>
-      <h2 className={styles['reviews-title']}>Reviews</h2>
-      <ul className={styles['review - list']}>
+    <div className={styles.reviewsContainer}>
+      <h3 className={styles.sectionTitle}>Reviews</h3>
+      <ul className={styles.reviewList}>
         {reviews.map(review => (
-          <li key={review.id} className={styles['review-item']}>
-            <p className={styles['review-author']}>{review.author}</p>
-            <p className={styles['review-content']}>{review.content}</p>
+          <li key={review.id} className={styles.reviewItem}>
+            <p className={styles.reviewAuthor}>{review.author}</p>
+            <p className={styles.reviewContent}>{review.content}</p>
           </li>
         ))}
       </ul>
