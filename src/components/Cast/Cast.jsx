@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 import { getMovieCast } from 'components/Api/Api';
 import styles from './Cast.module.css';
 
 function Cast() {
   const { movieId } = useParams();
   const [cast, setCast] = useState([]);
+  const navigate = useNavigate();
 
   useEffect(() => {
     async function fetchMovieCast() {
@@ -22,6 +23,9 @@ function Cast() {
 
   return (
     <div className={styles.castContainer}>
+      <button onClick={() => navigate(-1)} className={styles.backButton}>
+        Go Back
+      </button>
       <h3 className={styles.sectionTitle}>Cast</h3>
       <ul className={styles.castList}>
         {cast.map(actor => (

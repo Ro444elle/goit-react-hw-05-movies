@@ -1,3 +1,7 @@
+a {
+  text-decoration: none;
+}
+
 .home-container {
   padding: 20px;
   text-align: center;
@@ -6,6 +10,8 @@
 .trending-title {
   font-size: 24px;
   margin-bottom: 20px;
+  color: #121213;
+  font-weight: bold;
 }
 
 .movie-list {
@@ -29,4 +35,6 @@
 .movie-title {
   margin-top: 8px;
   font-size: 16px;
+  color: #0c0d0e;
+  font-weight: bold;
 }

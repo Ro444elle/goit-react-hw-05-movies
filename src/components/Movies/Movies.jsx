@@ -28,6 +28,7 @@ export default function Movies() {
   return (
     <div className={styles['movie-container']}>
       <input
+        className={styles.inputSearch}
         type="text"
         placeholder="Search for movies..."
         value={searchKeyword}
@@ -35,20 +36,24 @@ export default function Movies() {
         onKeyDown={handleEnterKeyPress}
       />
 
-      <button onClick={handleSearch}>Search</button>
+      <button onClick={handleSearch} className={styles.searchButton}>
+        Search
+      </button>
       {/* {error && <p>Error:{error.message}</p>} */}
-      <Link to="/">
+      {/* <Link to="/">
         <button className={styles.backButton}>Back to Home</button>
-      </Link>
+      </Link> */}
       <ul className={styles['movie-list']}>
         {movies.map(movie => (
           <li key={movie.id} className={styles['movie-item']}>
-            <p className={styles['movie-title']}>{movie.title}</p>
-            <img
-              src={`https://image.tmdb.org/t/p/w200/${movie.poster_path}`}
-              alt={movie.title}
-              className={styles['movie-poster']}
-            />
+            <Link to={`/movies/${movie.id}`}>
+              <p className={styles['movie-title']}>{movie.title}</p>
+              <img
+                src={`https://image.tmdb.org/t/p/w200/${movie.poster_path}`}
+                alt={movie.title}
+                className={styles['movie-poster']}
+              />
+            </Link>
           </li>
         ))}
       </ul>

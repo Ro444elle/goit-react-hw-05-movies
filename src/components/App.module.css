@@ -1,0 +1,27 @@
+.linkM,
+.linkH {
+  color: rgb(3, 38, 38);
+  text-decoration: none;
+  font-weight: bold;
+  margin-right: 20px;
+  float: left;
+  display: block;
+  text-align: center;
+  padding: 14px 16px;
+}
+
+.linkList {
+  list-style: none;
+  display: flex;
+  justify-content: flex-start;
+  padding: 10px 20px;
+  background-color: #e2dfdf;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+}
+
+.linkList ::after {
+  content: "";
+  display: table;
+  clear: both;
+}

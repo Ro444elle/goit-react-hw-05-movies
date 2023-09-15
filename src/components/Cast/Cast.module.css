@@ -6,6 +6,19 @@
   border-radius: 5px;
 }
 
+.backButton {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  background-color: beige;
+  color: #332929;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+
 .castTitle {
   font-size: 24px;
   margin-bottom: 10px;

@@ -4,6 +4,21 @@
   margin-left: 15px;
   background-color: #fff;
   border-radius: 8px;
+  border: 1px red;
+}
+
+
+.backButton {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  background-color: beige;
+  color: #332929;
+  border-radius: 4px;
+  transition: background-color 0.2s;
 }
 
 .movieTitle {
@@ -55,6 +70,7 @@
 
 .navigationLinks {
   margin-top: 30px;
+  overflow: hidden;
 }
 
 .linkC {
